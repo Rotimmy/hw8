@@ -4,9 +4,14 @@
 	// c) Add the party class to the div with the class .box
 	// BONUS: Add your own class to the CSS file and add it to the body when the event occurs.
 
-  $( "h1" ).click(function() {
-    $( "img" ).fadeIn( 900 );
-    $( "h1" ).text( "Let's Party!" );
-    $( ".box" ).addClass( "party" );
-    $( "body").addClass( "hey-now" );
+  $("h1").on("click",function() {
+    $("img").fadeIn( 900 );
+    $("h1").text("Let's Party!");
+    $(".box").addClass("party");
+    $("body").toggleClass("hey-now");
+    $("h1").toggleClass("fun")
+  });
+
+  $(".box").on("click",function(){
+    $(".box").css("display","none");
   });
